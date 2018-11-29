@@ -1,0 +1,37 @@
+* {
+    touch-action: none; 
+}
+
+canvas {
+    pointer-events: none;
+}
+
+[data-pad] .index-class{
+    background: pink;
+}
+
+[data-mobile] .index-class{
+    background: yellowgreen;
+}
+.index-class #mathspan{
+    @minWidth:100px;
+    @iconWidth:30px;
+    font-size: 32px!important;
+    line-height: 40px!important;
+    .quizPutTag{
+        font-size: 32px!important;
+        line-height: 40px!important;
+        min-width: @minWidth;
+        max-width: 100%;
+        text-align: center;
+        &.edit-icon::after{
+            content: '';
+            display: block;
+            width: @iconWidth;
+            height: @iconWidth;
+            position: relative;
+            left: calc((@minWidth - @iconWidth)/2);
+            background: url('~AFSImage/work_icon_modify.png') no-repeat;
+        }
+    }
+}

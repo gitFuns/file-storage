@@ -1,0 +1,51 @@
+.hybrid-math-input-wrapper{
+    .hybrid-math-input{
+        overflow-x: auto;
+    }
+    display: flex;
+
+    .keyboard_move_backward,.keyboard_move_forward{
+        width:40PX;
+        background-size:20PX;
+        background-position:center;
+        background-repeat: no-repeat;
+    }
+    .keyboard_move_backward{
+        background-image: url('~AFSImage/keyboard/keyboard_move_backward.svg');
+    }
+    .keyboard_move_forward{
+        background-image: url('~AFSImage/keyboard/keyboard_move_forward.svg');
+    }
+
+    .keyboard_move_forward.disabled{
+        background-image:url('~AFSImage/keyboard/keyboard_move_forward_disabled.svg');
+    }
+    .keyboard_move_backward.disabled{
+        background-image:url('~AFSImage/keyboard/keyboard_move_backward_disabled.svg');
+    }
+    .keyboard_yes{
+        min-width: 50PX;
+        font-size: 16PX;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:0 5PX;
+        color:#1890ff;
+        &.disabled{
+            color: #bbb;
+        }
+    }
+}
+.mq-editable-field{
+    display: inline-block;
+    width:initial;
+    flex: 1 1 auto;
+    border: 0;
+}
+
+.mq-root-block{
+    font-size:18PX;
+}
+.mq-root-block, .mq-math-mode .mq-root-block{
+    padding: 12PX 15PX 6PX 15PX;
+}

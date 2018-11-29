@@ -1,0 +1,266 @@
+
+.am-number-keyboard-wrapper {
+    *{
+        -webkit-touch-callout: none; 
+        -webkit-user-select: none; 
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    position: fixed;
+    &.show{
+        bottom: 0;
+    }
+    bottom: -700px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10000;
+    background-color: #f6f6f7;
+    transition-duration: 0.3s;
+    transform: translateZ(0);
+}
+
+.math-keyboard-item{
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    font-size: 18PX;
+    
+    background-size:30PX;
+    background-position:center;
+    background-repeat: no-repeat;
+    
+}
+
+.keyboard_hide{
+    background-image: url('~AFSImage/keyboard/keyboard_hide.svg');
+}
+
+.keyboard_more_or_equal{
+    background-image: url('~AFSImage/keyboard/keyboard_more_or_equal.svg');
+}
+
+.keyboard_pi{
+    background-image: url('~AFSImage/keyboard/keyboard_pi.svg');
+}
+
+.keyboard_alphabet{
+    background-image: url('~AFSImage/keyboard/keyboard_alphabet.svg');
+}
+
+.keyboard_absolute_value{
+    background-image: url('~AFSImage/keyboard/keyboard_absolute_value.svg');
+}
+
+.keyboard_or{
+    background-image: url('~AFSImage/keyboard/keyboard_or.svg');
+}
+
+.keyboard_nth_root{
+    background-image: url('~AFSImage/keyboard/keyboard_nth_root.svg');
+}
+
+.keyboard_nth_power{
+    background-image: url('~AFSImage/keyboard/keyboard_nth_power.svg');
+}
+
+.keyboard_greater{
+    background-image: url('~AFSImage/keyboard/keyboard_greater.svg');
+}
+
+.keyboard_minus{
+    background-image: url('~AFSImage/keyboard/keyboard_minus.svg');
+}
+
+.keyboard_backspace{
+    background-image: url('~AFSImage/keyboard/keyboard_backspace.svg');
+}
+.keyboard_fraction{
+    background-image: url('~AFSImage/keyboard/keyboard_fraction.svg');
+}
+.keyboard_less{
+    background-image: url('~AFSImage/keyboard/keyboard_less.svg');
+}
+.keyboard_less_or_equal{
+    background-image: url('~AFSImage/keyboard/keyboard_less_or_equal.svg');
+}
+.keyboard_squared{
+    background-image: url('~AFSImage/keyboard/keyboard_squared.svg');
+}
+.keyboard_plus_or_minus{
+    background-image: url('~AFSImage/keyboard/keyboard_plus_or_minus.svg');
+}
+.keyboard_plus{
+    background-image: url('~AFSImage/keyboard/keyboard_plus.svg');
+}
+.keyboard_square_root{
+    background-image: url('~AFSImage/keyboard/keyboard_square_root.svg');
+}
+.keyboard_uppercase_locked{
+    background-image:url('~AFSImage/keyboard/keyboard_uppercase_locked.svg');
+}
+.keyboard_uppercase_lock{
+    background-image:url('~AFSImage/keyboard/keyboard_uppercase_lock.svg');
+}
+.keyboard_sin {
+    background-image:url('~AFSImage/keyboard/keyboard_sin.svg');
+    background-size:50PX;
+}
+.keyboard_cos {
+    background-image:url('~AFSImage/keyboard/keyboard_cos.svg');
+    background-size:50PX;
+}
+.keyboard_tan {
+    background-image:url('~AFSImage/keyboard/keyboard_tan.svg');
+    background-size:50PX;
+}
+.keyboard_ln {
+    background-image:url('~AFSImage/keyboard/keyboard_ln.svg');
+    background-size:50PX;
+}
+.keyboard_log {
+   background-image:url('~AFSImage/keyboard/keyboard_log.svg');
+   background-size:50PX;
+}
+.keyboard_infinite {
+    background-image:url('~AFSImage/keyboard/keyboard_infinite.svg'); 
+}
+.keyboard_back{
+    background-image:url('~AFSImage/keyboard/keyboard_back.svg');
+    background-size:50PX;
+}
+.grey-back.math-keyboard-item{
+    background-color: #ddd;
+}
+.grey-back.math-keyboard-item.math-keyboard-item-active{
+    background-color: #AAA;
+}
+.math-keyboard-item-active{
+    background-color: #AAA;
+}
+
+.keyboard-grid{
+    margin:5PX;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(5,40PX);
+    grid-template-areas:
+    "e e n1 n2 n3 x"
+    "e e n4 n5 n6 o"
+    "e e n7 n8 n9 o"
+    "e e n0 n0 d o"
+    "a f c c c c";
+    grid-gap: 5PX;
+
+    .comparation{
+        grid-area: c;
+    }
+    .opration{
+        grid-area: o;
+    }
+    .fun{
+        grid-area: f;
+    }
+    .apha{
+        grid-area: a;
+    }
+    .close{
+        grid-area: x;
+    }
+    .expression{
+        grid-area: e;
+    }
+    .number-0{
+        grid-area: n0;
+    }
+    .number-1{
+        grid-area: n1;
+    }
+    .number-2{
+        grid-area: n2;
+    }
+    .number-3{
+        grid-area: n3;
+    }
+    .number-4{
+        grid-area: n4;
+    }
+    .number-5{
+        grid-area: n5;
+    }
+    .number-6{
+        grid-area: n6;
+    }
+    .number-7{
+        grid-area: n7;
+    }
+    .number-8{
+        grid-area: n8;
+    }
+    .number-9{
+        grid-area: n9;
+    }
+    .number-\.{
+        grid-area: d;
+    }
+    .latex-grid,.opration-grid,.comparation-grid{
+        display: grid;
+        grid-gap: 5PX;
+        background-color: #ddd;
+    }
+    .latex-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,40PX);
+    }
+    .opration-grid{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,40PX);
+    }
+    .comparation-grid{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(1,40PX);
+    }
+}
+
+
+/** 字母样式*/
+
+.apha-flex{
+    display: flex;
+    justify-content: center;
+    .math-keyboard-item.apha-item{
+        width:8.5%;
+        flex:0 0 auto;
+    }
+    .math-keyboard-item{
+        height:50PX;
+        margin:5PX 2PX;
+        width:initial;
+        flex: 1 1 auto;
+    }
+    .opration-grid{
+        margin:5PX;
+        width:66.66%;
+        display: grid;
+        grid-gap: 5px;
+        background-color: #ddd;
+    }
+    .opration-grid{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(1,40PX);
+        .math-keyboard-item{
+            margin: 0;
+        }
+    }
+
+    .footer-item,.opration-grid .math-keyboard-item{
+        height:40PX;
+        
+    }
+
+}
